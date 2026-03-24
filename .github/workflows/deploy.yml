@@ -58,7 +58,7 @@ jobs:
     name: OpenTofu Deploy
     runs-on: ubuntu-latest
     needs: [set-values, tf-plan]
-    environment: ${{ needs.set-values.outputs.account_lifecycle }}
+    environment: main
     steps:
       - name: Checkout
         uses: actions/checkout@v4
